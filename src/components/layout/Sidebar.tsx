@@ -47,26 +47,26 @@ export function Sidebar() {
           <Link
             key={item.label}
             to={item.path}
-            className={`flex items-center p-4 hover:bg-gray-100 dark:hover:bg-gray-800 ${
-              location.pathname === item.path ? 'bg-gray-100 dark:bg-gray-800' : ''
+            className={`flex items-center p-4 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white hover:text-gray-900 ${
+              location.pathname === item.path ? 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white' : ''
             } ${
               collapsed ? 'justify-center' : 'space-x-4'
             }`}
           >
-            <item.icon size={20} />
-            {!collapsed && <span>{item.label}</span>}
+            <item.icon size={20} className="text-current"/>
+            {!collapsed && <span className="text-current">{item.label}</span>}
           </Link>
         ))}
       </nav>
 
       <div className="absolute bottom-0 w-full p-4">
         <button
-          className={`flex items-center p-4 hover:bg-gray-100 dark:hover:bg-gray-800 w-full ${
+          className={`flex items-center p-4 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white hover:text-gray-900 w-full ${
             collapsed ? 'justify-center' : 'space-x-4'
           }`}
         >
-          <LogOut size={20} />
-          {!collapsed && <span>Logout</span>}
+          <LogOut size={20} className="text-current"/>
+          {!collapsed && <span className="text-current">Logout</span>}
         </button>
       </div>
     </div>
