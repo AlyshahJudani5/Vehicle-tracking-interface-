@@ -42,7 +42,7 @@ export function App() {
           }`}>
             {isLoggedIn && <Sidebar onLogout={handleLogout}/>}
             <main className="flex-1 ml-64 p-8">
-              <div className="max-w-7xl mx-auto">
+              <div className="max-w-full mx-auto">
                 <Routes>
                   <Route path="/login" element={<LoginPage onLogin={() => setIsLoggedIn(true)}/>} />
                   <Route path="/" element={<PrivateRoute><Dashboard /></PrivateRoute>} />

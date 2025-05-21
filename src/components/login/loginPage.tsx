@@ -45,7 +45,7 @@ export function LoginPage({ onLogin }: { onLogin: () => void }) {
                             <img className="app-image" src="/images/logo5.png" alt="App illustration" />
                         </div>
                         <div className="col left-background ">
-                            <p style={{ color:"#969696" }}>Powerd By INNOVISTA INDUS</p>
+                            <p>Powerd By INNOVISTA INDUS</p>
                         </div>
                     </div>
                     <div className="form-section">
