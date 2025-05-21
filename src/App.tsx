@@ -6,7 +6,7 @@ import { MapView } from './pages/MapView';
 import { Reports } from './pages/Reports';
 import { Alerts } from './pages/Alerts';
 import { Settings } from './pages/Settings';
-import { LoginPage } from './components/login/loginPage.tsx'; // Make sure the path is correct
+import { LoginPage } from './components/login/loginPage.tsx';
 import { useStore } from './store/useStore';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
