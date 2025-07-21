@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,7 +10,7 @@ import {
   Legend,
   ArcElement,
 } from 'chart.js';
-import { Line, Pie } from 'react-chartjs-2';
+// import { Line, Pie } from 'react-chartjs-2';
 import { useStore } from '../store/useStore';
 
 ChartJS.register(
@@ -58,20 +58,29 @@ export function Reports() {
   };
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-8">Reports</h1>
+          <div className="mt-8">
+          <h2 className="text-xl font-semibold mb-4">Kibana Dashboard</h2>
+          <iframe
+            src="http://localhost:5601/app/dashboards#/view/your-dashboard-id?embed=true"
+            height="700"
+            width="100%"
+            style={{ border: 'none' }}
+          ></iframe>
+        {/* </div>
+
+        // <div>
+    //   <h1 className="text-2xl font-bold mb-8">Reports</h1>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold mb-4">Vehicle Speeds</h2>
-          <Line data={speedData} />
-        </div>
-        
+    //   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    //     <div className="bg-white p-6 rounded-lg shadow-md">
+    //       <h2 className="text-xl font-semibold mb-4">Vehicle Speeds</h2>
+    //       <Line data={speedData} />
+    //     </div>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4">Vehicle Status Distribution</h2>
           <Pie data={statusData} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

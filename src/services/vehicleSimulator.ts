@@ -7,7 +7,7 @@ const UPDATE_INTERVAL = 2000; // ms
 export class VehicleSimulator {
   private subscribers: ((vehicles: Vehicle[]) => void)[] = [];
   private vehicles: Vehicle[] = [];
-  private interval: NodeJS.Timer | null = null;
+  private interval: ReturnType<typeof setInterval> | null = null;
 
   constructor(initialVehicles: Vehicle[]) {
     this.vehicles = initialVehicles;
