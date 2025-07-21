@@ -61,7 +61,7 @@ export function Reports() {
           <div className="mt-8">
           <h2 className="text-xl font-semibold mb-4">Kibana Dashboard</h2>
           <iframe
-              src="https://07312c1db24d.ngrok-free.app/app/dashboards#/view/your-dashboard-id?embed=true"
+              src="https://5c979b14c42e.ngrok-free.app/app/dashboards#/view/your-dashboard-id?embed=true"
             height="700"
             width="100%"
             style={{ border: 'none' }}
