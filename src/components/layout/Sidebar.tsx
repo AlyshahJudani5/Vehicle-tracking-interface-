@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { useStore } from '../../store/useStore';
 
-export function Sidebar() {
+export function Sidebar({ onLogout }: { onLogout: () => void }) {
   const [collapsed, setCollapsed] = React.useState(false);
   const theme = useStore((state) => state.theme);
   const location = useLocation();
@@ -64,6 +64,7 @@ export function Sidebar() {
           className={`flex items-center p-4 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white hover:text-gray-900 w-full ${
             collapsed ? 'justify-center' : 'space-x-4'
           }`}
+          onClick={onLogout}
         >
           <LogOut size={20} className="text-current"/>
           {!collapsed && <span className="text-current">Logout</span>}
